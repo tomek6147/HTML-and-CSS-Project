@@ -1,8 +1,12 @@
 p {
+	
 	color:tomato;
-	background:DodgerBlue;
+	background-color:DodgerBlue;
 	font-weight:italic;
 	text-align:center;
 	font-size:50px;
-}
 	
+}
+h1 {
+	text-shadow: 2px 2px #ff0000;
+}
