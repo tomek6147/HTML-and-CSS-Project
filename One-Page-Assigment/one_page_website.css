@@ -1,0 +1,19 @@
+
+body {
+    background-color: antiquewhite;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    color: darkslategrey;
+}
+
+h1 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+form imput[type="text"] {
+    width: 20%;
+    margin: 5px;
+    border: 2px solid paleturquoise;
+    border-radius: 7px;
+}
