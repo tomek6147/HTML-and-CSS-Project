@@ -1,0 +1,15 @@
+.center {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+img {
+    filter: grayscale(100%);
+}
+div.a {
+    text-align: center;
+}
+p.thick {
+    font-weight: bold;
+}
