@@ -3,40 +3,20 @@
 	<head>
 		<title>TRAVEL</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="one_page_website.css"
+		<link rel="stylesheet" href="one_page_website.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
-details > summary {
-  padding: 4px;
-  width: 200px;
-  background-color: #eeeeee;
-  border: none;
-  box-shadow: 1px 1px 2px #bbbbbb;
-  cursor: pointer;
-}
-
-details > p {
-  background-color: #eeeeee;
-  padding: 4px;
-  margin: 0;
-  box-shadow: 1px 1px 2px #bbbbbb;
-}
-</style>	
- </head>
+	</head>
  
  <body>
  
 		<!--NAV-->
-		<div>
-			<div>
-				<ul>
-					<a href="#Home" id="link"><li>HOME</li></a>
-					<a href="#gallery" id="link"><li>GALLERY</li></a>
-					<a href="#contact" id="link"><li>CONTACT</li></a>
-				</ul>
-			</div>
-		</div>
+		<nav>
+			<ul>
+				<li><a href="#Home" class="link">HOME</a></li>
+				<li><a href="#gallery" class="link">GALLERY</a></li>
+				<li><a href="#contact" class="link">CONTACT</a></li>
+			</ul>
+		</nav>
 		<!--END NAV-->
 		
 		<!--HOME-->
@@ -52,89 +32,106 @@ details > p {
 		<!--GALLERY-->
 		
 		<section id="gallery">
-			<div class="w3-container">
+			<div class="gallery-container">
 					<h1>Gallery</h1>
-					<div class="flex-container">
+					<div class="gallery-row">
+						<div class="gallery-thumbnail">
 					
-						<!--PHOTO CONTAINER 1-->
 
-						<div class="w3-container">
-							<div class="photo">
-								<img src="Thumb/thumbnail_1.jpeg" height="300" width="400"
-									class="w3-border" alt="The Mountain" style="padding:4px;width:50%">
-								<div class="photo-overlay">
-									
-									<p>Just take the first step!</P>
-								</div>
-							</div>
-						</div>
-						<!--END PHOTO CONTAINER 1-->
-						
-						<!--PHOTO CONTAINER 2-->
-						<div class="w3-container">
-							<div class="photo">
-							<img src="Thumb/thumbnail_2.jpeg" height="300" width="400"
-							alt="The Mountain" class="w3-border" alt="The Mountain" style="padding:4px;width:50%">
-								<div class="photo-overlay">
-									
-									<p> Lavender Flower Field Under Pink Sky</P>
-								</div>
-							</div>
-						</div>
-						<!--END PHOTO CONTAINER 2-->
-						
-						<!--PHOTO CONTAINER 3-->
-						<div class="w3-container">
-							<div class="photo">
-							<img src="Thumb\thumbnail_3.jpeg" height="300" width="400"
-							alt="The Mountain" class="w3-border" alt="The Mountain" style="padding:4px;width:50%">
-								<div class="photo-overlay">
-									
-									<p>Canada lake mountain</P>
-								</div>
-							</div>
-						</div>
-						<!--END PHOTO CONTAINER 3-->
-						
-						<!--PHOTO CONTAINER 4-->
-						<div class="w3-container">
-							<div class="photo">
-							<img src="Thumb\thumbnail_4.jpeg" height="300" width="400"
-							alt="The Mountain" class="w3-border" alt="The Mountain" style="padding:4px;width:50%">
-								<div class="photo-overlay">
-									
-									<p>Reflection</P>
-								</div>
-							</div>
-						</div>
-						<!--END PHOTO CONTAINER 4-->
-						
-						<!--PHOTO CONTAINER 5-->
-						<div class="w3-container">
-							<div class="photo">
-							<img src="Thumb\thumbnail_5.jpeg" height="300" width="400"
-							alt="The Mountain" class="w3-border" alt="The Mountain" style="padding:4px;width:50%">
-								<div class="photo-overlay">
-									
-									<p>Just trial</P>
-								</div>
-							</div>
-						</div>
-						<!--END PHOTO CONTAINER 5-->
-						
-						<!--PHOTO CONTAINER 6-->
-						<div class="w3-container">
-							<div class="photo">
-							<img src="Thumb\thumbnail_6.jpeg" height="300" width="400"
-							alt="The Mountain" class="w3-border" alt="The Mountain" style="padding:4px;width:50%">
-								<div class="photo-overlay">
-									
-									<p>Sunrise on the lake</P>
-								</div>
-							</div>
-						</div>
-						<!--END PHOTO CONTAINER 6-->
-					</div>
+						<!-- Images used to open the lightbox -->
+<div class="row">
+	<div class="column">
+	  <img src="Thumb/thumbnail_1.jpeg" onclick="openModal();currentSlide(1)" class="thumbnail-image" alt="Nature">
+	</div>
+	<div class="column">
+	  <img src="Thumb/thumbnail_2.jpeg" onclick="openModal();currentSlide(2)" class="thumbnail-image" alt="Nature">
+	</div>
+	<div class="column">
+	  <img src="Thumb/thumbnail_3.jpeg" onclick="openModal();currentSlide(3)" class="thumbnail-image" alt="Nature">
+	</div>
+	<div class="column">
+	  <img src="Thumb/thumbnail_4.jpeg" onclick="openModal();currentSlide(4)" class="thumbnail-image" alt="Nature">
+	</div>
+	<div class="column">
+		<img src="Thumb/thumbnail_5.jpeg" onclick="openModal();currentSlide(5)" class="thumbnail-image" alt="Nature">
+	  </div>
+	  <div class="column">
+		<img src="Thumb/thumbnail_6.jpeg" onclick="openModal();currentSlide(6)" class="thumbnail-image" alt="Nature">
+	  </div>
+  </div>
+</div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+	<span class="close cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+  
+	  <div class="mySlides">
+		<div class="numbertext">1 / 6</div>
+		<img src="Thumb/Big_1.jpeg" style="width:100%" alt="Nature">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">2 / 6</div>
+		<img src="Thumb/Big_2.jpeg" style="width:100%" alt="Nature">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">3 / 6</div>
+		<img src="Thumb/Big_3.jpeg" style="width:100%" alt="Nature">
+	  </div>
+  
+	  <div class="mySlides">
+		<div class="numbertext">4 / 6</div>
+		<img src="Thumb/Big_4.jpeg" style="width:100%" alt="Nature">
+	  </div>
+
+	  <div class="mySlides">
+		<div class="numbertext">5 / 6</div>
+		<img src="Thumb/Big_5.jpeg" style="width:100%" alt="Nature">
+	  </div>
+
+	  <div class="mySlides">
+		<div class="numbertext">6 / 6</div>
+		<img src="Thumb/Big_6.jpeg" style="width:100%" alt="Nature">
+	  </div>
+  
+	  <!-- Next/previous controls -->
+	  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	  <!-- Caption text -->
+	  <div class="caption-container">
+		<p id="caption"></p>
+	  </div>
+  
+	  <!-- Thumbnail image controls -->
+	  <div class="column">
+		<img class="nature" src="Thumb/thumbnail_1.jpeg" onclick="currentSlide(1)" alt="Nature">
+	  </div>
+  
+	  <div class="column">
+		<img class="nature" src="Thumb/thumbnail_2.jpeg" onclick="currentSlide(2)" alt="Nature">
+	  </div>
+  
+	  <div class="column">
+		<img class="nature" src="Thumb/thumbnail_3.jpeg" onclick="currentSlide(3)" alt="Nature">
+	  </div>
+  
+	  <div class="column">
+		<img class="nature" src="Thumb/thumbnail_4.jpeg" onclick="currentSlide(4)" alt="Nature">
+	  </div>
+
+	  <div class="column">
+		<img class="nature" src="Thumb/thumbnail_5.jpeg" onclick="currentSlide(5)" alt="Nature">
+	  </div>
+
+	  <div class="column">
+		<img class="nature" src="Thumb/thumbnail_6.jpeg" onclick="currentSlide(6)" alt="Nature">
+	  </div>
+	</div>
+  </div>
+  
 			</div>
 		</section>
 		
@@ -162,16 +159,16 @@ details > p {
 					<div>
 						<h2><span><i>Your adventure is just around the corner.</i></span>
 							<br />Get advice about traveling
-						<h/2>
+						</h2>
 						<p>
 						   Please provide us with your basic contact information.
 						</p>
 						<div>
 							<form action="" method="post">
-								<input class="rsvp" type="text" value="First Name">
-								<input class="rsvp" type="text" value="Last Name">
-								<input class="rsvp" type="text" value="Email Address">
-								<input class="rsvp" type="text" value="Phone Number">
+								<input class="rsvp" type="text" placeholder="First Name">
+								<input class="rsvp" type="text" placeholder="Last Name">
+								<input class="rsvp" type="text" placeholder="Email Address">
+								<input class="rsvp" type="text" placeholder="Phone Number">
 								<div class="form-spacer">
 									<label class="terms">Terms and Conditions</label>
 								</div>
@@ -186,7 +183,7 @@ details > p {
 		</section>
 		<!--END RSVP-->
 		
-		
+		<script src="JS/one_page_website.js"></script>
 	
 		
 		<!--FOOTER-->
